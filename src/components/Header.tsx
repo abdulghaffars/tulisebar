@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import tulisebarIcon from "@/../public/icons/tulisebaricon/tulisebar-full-nb.png";
 import { Menu } from "lucide-react";
 import useSidebarStore from "@/store/sidebarStore";
 
@@ -23,7 +22,7 @@ export default function Header() {
 
       <div className="flex items-center hover:cursor-pointer">
         <Image
-          src={tulisebarIcon}
+          src={"/icons/tulisebaricon/tulisebar-full-nb.png"}
           alt="logo"
           width={140}
           height={36}
