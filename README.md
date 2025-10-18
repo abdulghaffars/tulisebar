@@ -20,8 +20,10 @@ A modern blog management application built with Next.js, featuring a multi-step 
 - **Styling**: Tailwind CSS
 - **State Management**: Zustand
 - **UI Components**: Shadcn/ui
+- **Icons**: Lucide (modern open-source icon set)
 - **Notifications**: SweetAlert2 (Beautiful alerts and notifications)
 - **Date Handling**: Date-fns
+
 
 ## 📦 Installation
 

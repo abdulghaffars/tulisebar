@@ -14,7 +14,7 @@ export default function AddPostForm() {
         <Step4 key={4} />,
     ];
     return (
-        <div className="h-fit w-[calc(100%-312px)] bg-white m-4 rounded-lg p-4 ">
+        <div className="h-fit bg-white m-4 rounded-lg p-4 ">
             {steps[stepVisible - 1]}
         </div>
     );
