@@ -11,7 +11,7 @@ export default function Header() {
         <div className="sticky top-0 z-50 flex items-center justify-between px-4 py-3 md:px-8 md:py-4 bg-white shadow-md border-b">
             <div className="flex items-center hover:cursor-pointer">
                 <Image 
-                    src="/tulisebar-full-nb.png" 
+                    src="/icons/tulisebaricon/tulisebar-full-nb.png" 
                     alt="logo" 
                     width={140} height={36}
                     className="h-8 w-auto md:h-10 lg:h-12"
