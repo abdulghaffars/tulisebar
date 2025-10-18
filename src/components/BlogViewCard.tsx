@@ -2,12 +2,24 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { BlogPost } from "@/type/PostList";
 import { FormAddPostData } from "@/type/AddForm";
+import { useEffect, useState } from "react";
+import { formatDate } from "@/lib/utils";
 
 export default function BlogViewCard({
   blogPost,
 }: {
   blogPost: BlogPost | FormAddPostData;
 }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -30,13 +42,9 @@ export default function BlogViewCard({
                   </p>
                   <p className="text-sm text-gray-500">
                     {(blogPost && "createdAt" in blogPost && blogPost.createdAt
-                      ? new Date(blogPost.createdAt)
-                      : new Date()
-                    ).toLocaleDateString("id-ID", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
+                      ? formatDate(new Date(blogPost.createdAt))
+                      : formatDate(new Date())
+                    )}
                   </p>
                 </div>
               </div>

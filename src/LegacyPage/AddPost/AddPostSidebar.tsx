@@ -47,7 +47,7 @@ export default function AddPostSidebar() {
     ];
 
     return (
-        <div className="sticky top-0 self-start w-[280px] h-[calc(100vh-100px)] overflow-y-auto bg-white border-r border-gray-200 flex-shrink-0">
+        <div className="sticky top-0 self-start w-[280px] h-[calc(100vh-82px)] overflow-y-auto bg-white border-r border-gray-200 flex-shrink-0">
             <div className="p-4 space-y-2">
                 <h3 className="text-sm font-semibold text-gray-900 mb-4">Progress Steps</h3>
                 {steps.map((step) => (

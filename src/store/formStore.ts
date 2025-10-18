@@ -116,9 +116,6 @@ export const useFormStore = create<FormStore>()(
             blogContent: '',
           }
         }));
-        
-        console.log('Blog post saved with ID:', newId);
-        alert(`Blog post berhasil disimpan dengan ID: ${newId}`);
         return true;
       },
 

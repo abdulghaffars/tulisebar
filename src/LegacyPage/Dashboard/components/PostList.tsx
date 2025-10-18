@@ -45,7 +45,7 @@ export default function PostList() {
   const DashboardContent = blogPosts.length > 0 ? <BlogPostList sortedPostList={sortedPostList} /> : <EmptyBlogCard />;
 
   return (
-    <div className="w-[calc(100%-296px)] h-full flex flex-col p-4 gap-4">
+    <div className="w-full h-full flex flex-col p-4 gap-4">
       <SortDropDownButton
         categories={SortCategoryDummyData}
         selectedCategory={selectedCategory}

@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export default function Sidebar() {
     const router = useRouter();
     return (
-        <div className="sticky top-0 self-start w-[280px] h-[calc(100vh-100px)] overflow-y-auto bg-white">
+        <div className="sticky top-0 self-start w-[280px] h-[calc(100vh-82px)] overflow-y-auto bg-white">
             <div className="p-4 flex justify-center">
             <Button onClick={() => router.push("/add-post")}>
                 Add Post

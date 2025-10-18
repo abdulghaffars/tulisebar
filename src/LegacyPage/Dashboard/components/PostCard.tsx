@@ -8,7 +8,7 @@ export default function PostCard({ post }: { post: BlogPost }) {
   const router = useRouter();
   return (
     <div
-          className="w-full h-full bg-white rounded-lg p-4 flex flex-col transition-shadow hover:shadow-sm"
+          className="w-full h-fit bg-white rounded-lg p-4 flex flex-col transition-shadow hover:shadow-sm"
           onClick={() => router.push(`/blog/${post.id}`)}
         >
           <div className="flex justify-between items-center">
