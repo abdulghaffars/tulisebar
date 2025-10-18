@@ -2,7 +2,7 @@
 import { useFormStore } from "@/store/formStore";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
+import Swal from 'sweetalert2';
 import { useRouter } from "next/navigation";
 
 export default function Step4() {
@@ -12,10 +12,21 @@ export default function Step4() {
   const handleSubmit = () => {
     const result = addBlogPost();
     if (result) {
-      toast.success("Blog post added successfully");
-      router.push("/");
+      Swal.fire({
+        title: 'Success!',
+        text: 'Blog post added successfully',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      }).then(() => {
+        router.push("/");
+      });
     } else {
-      toast.error("Failed to add blog post");
+      Swal.fire({
+        title: 'Error!',
+        text: 'Failed to add blog post',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
     }
   };
 

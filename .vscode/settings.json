@@ -7,6 +7,9 @@
         "harus",
         "partialize",
         "Semua",
-        "Shadcn"
+        "Shadcn",
+        "Swal",
+        "sweetalert",
+        "turbopack"
     ]
 }

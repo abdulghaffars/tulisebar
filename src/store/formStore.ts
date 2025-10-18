@@ -1,6 +1,6 @@
 import { FormAddPostData } from '@/type/AddForm';
 import { BlogPost } from '@/type/PostList';
-import { toast } from 'sonner';
+import Swal from 'sweetalert2';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
@@ -85,7 +85,12 @@ export const useFormStore = create<FormStore>()(
         
         if (!formData.blogTitle || !formData.authorName || !formData.blogSummary || 
             !formData.blogCategory || !formData.blogContent) {
-          toast.error('Semua field harus diisi!');
+          Swal.fire({
+            title: 'Error!',
+            text: 'All fields are required!',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
           return false;
         }
         

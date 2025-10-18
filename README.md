@@ -20,8 +20,7 @@ A modern blog management application built with Next.js, featuring a multi-step 
 - **Styling**: Tailwind CSS
 - **State Management**: Zustand
 - **UI Components**: Shadcn/ui
-- **Icons**: Lucide React
-- **Notifications**: Sonner (Toast notifications)
+- **Notifications**: SweetAlert2 (Beautiful alerts and notifications)
 - **Date Handling**: Date-fns
 
 ## 📦 Installation
@@ -115,34 +114,7 @@ src/
 - **Dark/Light Mode Ready**: Built with modern design principles
 - **Smooth Animations**: Subtle transitions and hover effects
 - **Accessibility**: Proper ARIA labels and keyboard navigation
-- **Toast Notifications**: User feedback for actions
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy with zero configuration
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/abdulghaffars/tulisebar)
-
-### Other Platforms
-
-This is a standard Next.js application and can be deployed to:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
+- **SweetAlert2 Notifications**: Beautiful alerts and user feedback
 
 ## 👨‍💻 Author
 
