@@ -1,4 +1,3 @@
-// src/LegacyPage/AddPost/components/Step4.tsx
 import { useFormStore } from "@/store/formStore";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import Swal from 'sweetalert2';
 import { useRouter } from "next/navigation";
 
 export default function Step4() {
-  const { formData, addBlogPost, setStepVisible } = useFormStore();
+  const { formData, addBlogPost, setStepVisible, resetForm } = useFormStore();
   const router = useRouter();
 
   const handleSubmit = () => {
@@ -66,29 +65,40 @@ export default function Step4() {
         <p className="text-base whitespace-pre-wrap">{formData.blogContent}</p>
       </div>
 
-      <div className="flex justify-end gap-2">
-        <Button
-          variant="outline"
-          onClick={() => setStepVisible(3)}
-          className="w-fit"
-        >
-          Back
-        </Button>
-        <Button
-          onClick={() => window.open("/add-post/preview")}
-          className="w-fit"
-        >
-          Preview
-        </Button>
-        <Button
-          onClick={handleSubmit}
-          className="bg-green-600 hover:bg-green-700 text-white px-8"
-        >
-          Submit Blog
-        </Button>
-        <Button variant="outline" onClick={() => window.location.reload()}>
-          Cancel
-        </Button>
+      <div className="flex justify-center gap-2 md:justify-end ">
+        <div className="flex gap-2 flex-wrap max-[450]:justify-end">
+          <Button
+            variant="outline"
+            onClick={() => setStepVisible(3)}
+            className="w-fit max-[450]:order-2 max-[450]:w-36"
+          >
+            Back
+          </Button>
+          <Button
+            onClick={() => window.open("/add-post/preview")}
+            className="w-fit max-[450]:w-36"
+          >
+            Preview
+          </Button>
+        </div>
+        <div className="flex gap-2 flex-wrap">
+          <Button
+            onClick={handleSubmit}
+            className="bg-green-600 hover:bg-green-700 text-white px-8 max-[450]:w-36"
+          >
+            Submit Blog
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => {
+              resetForm();
+              router.push("/");
+            }}
+            className="max-[450]:w-36"
+          >
+            Cancel
+          </Button>
+        </div>
       </div>
     </div>
   );
