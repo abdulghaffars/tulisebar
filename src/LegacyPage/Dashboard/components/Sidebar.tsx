@@ -7,12 +7,13 @@ import useSidebarStore from "@/store/sidebarStore";
 import { X } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-export default function Sidebar() {
+export default function Sidebar( { className }: { className?: string } ) {
   const { isSidebarMenuOpen, toggleSidebarMenu } = useSidebarStore();
 
   const router = useRouter();
   return (
     <div className={cn(
+        className,
         "w-[280px] h-full bg-white border-r border-gray-200 flex-shrink-0 relative",
         "md:relative md:translate-x-0 transition-transform duration-300",
         isSidebarMenuOpen 

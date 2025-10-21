@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { Menu } from "lucide-react";
+import { HouseIcon, Menu } from "lucide-react";
 import useSidebarStore from "@/store/sidebarStore";
 
 export default function Header() {
@@ -31,6 +31,16 @@ export default function Header() {
           onClick={() => router.push("/")}
         />
       </div>
+
+      <Button
+        variant="ghost"
+        className="hidden md:flex items-center gap-2"
+        onClick={() => router.push("/")}
+      >
+        <HouseIcon className="size-6" />
+        <span className="text-lg font-medium">Home</span>
+      </Button>
+
       <Button variant="ghost" className="gap-2">
         <Avatar>
           <AvatarImage src="/icons/user-solid-full.svg" alt="user" />
